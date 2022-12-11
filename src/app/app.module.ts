@@ -3,14 +3,24 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { StopkaComponent } from './stopka/stopka.component';
+import { NaglowekComponent } from './naglowek/naglowek.component';
+import { WiadomosciComponent } from './wiadomosci/wiadomosci.component';
+import { WiadomoscComponent } from './wiadomosc/wiadomosc.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    StopkaComponent,
+    NaglowekComponent,
+    WiadomosciComponent,
+    WiadomoscComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

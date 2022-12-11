@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular123';
+  public tytul = 'To jest komponent app';
+  public data = new Date();
 }

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit} from '@angular/core';
+import { Component, Input, OnDestroy, OnInit} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PogodaService } from '../pogoda.service';
 
@@ -8,7 +8,7 @@ import { PogodaService } from '../pogoda.service';
   styleUrls: ['./wiadomosc.component.scss'],
   providers: [PogodaService]
 })
-export class WiadomoscComponent implements OnInit{
+export class WiadomoscComponent implements OnInit, OnDestroy{
   @Input("mojtytul")
   public tytul = "probny tytul";
   @Input()
@@ -23,5 +23,8 @@ export class WiadomoscComponent implements OnInit{
       this.id = params['id'] as number;
     }
     )
+  }
+  ngOnDestroy(): void {
+    console.log('koniec zycia komonentu wiadomosc');
   }
 }

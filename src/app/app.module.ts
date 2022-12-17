@@ -9,6 +9,7 @@ import { WiadomosciComponent } from './wiadomosci/wiadomosci.component';
 import { WiadomoscComponent } from './wiadomosc/wiadomosc.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormularzComponent } from './formularz/formularz.component';
+import { NawigacjaComponent } from './nawigacja/nawigacja.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FormularzComponent } from './formularz/formularz.component';
     NaglowekComponent,
     WiadomosciComponent,
     WiadomoscComponent,
-    FormularzComponent
+    FormularzComponent,
+    NawigacjaComponent
   ],
   imports: [
     BrowserModule,

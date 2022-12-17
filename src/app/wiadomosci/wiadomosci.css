@@ -1,0 +1,18 @@
+p {
+  font-size: 11px;
+  padding: 20px;
+  margin: 20px;
+  background-color: yellow;
+}
+
+tr {
+  background-color: black;
+}
+tr td {
+  color: rgba(0, 128, 0, 0.7);
+  font-size: 14px;
+}
+tr th {
+  background-color: red;
+  font-size: 21px;
+}

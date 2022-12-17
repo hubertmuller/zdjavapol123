@@ -1,5 +1,9 @@
 <p>Najnowsze wiadomosci</p>
 
+<p>children routing start</p>
+<router-outlet></router-outlet>
+<p>children routing stop</p>
+
 <div>
 {{wydrukuj()}}
 </div>
@@ -24,9 +28,9 @@
 
 <ul>
 
-    <app-wiadomosc [tytul]="pierwszyTytul" lead="Lead1"></app-wiadomosc>
-    <app-wiadomosc tytul="Artykuł2" lead="Lead2"></app-wiadomosc>
-    <app-wiadomosc tytul="Artykuł3" lead="Lead3"></app-wiadomosc>
-    <app-wiadomosc tytul="Artykuł4" lead="Lead4"></app-wiadomosc>
+    <app-wiadomosc [mojtytul]="pierwszyTytul" lead="Lead1"></app-wiadomosc>
+    <app-wiadomosc mojtytul="Artykuł2" lead="Lead2"></app-wiadomosc>
+    <app-wiadomosc mojtytul="Artykuł3" lead="Lead3"></app-wiadomosc>
+    <app-wiadomosc mojtytul="Artykuł4" lead="Lead4"></app-wiadomosc>
 
 </ul>

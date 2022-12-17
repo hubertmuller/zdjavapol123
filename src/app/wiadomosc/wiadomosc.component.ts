@@ -1,4 +1,5 @@
-import { Component, Input} from '@angular/core';
+import { Component, Input, OnInit} from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { PogodaService } from '../pogoda.service';
 
 @Component({
@@ -7,13 +8,20 @@ import { PogodaService } from '../pogoda.service';
   styleUrls: ['./wiadomosc.component.scss'],
   providers: [PogodaService]
 })
-export class WiadomoscComponent {
-  @Input()
+export class WiadomoscComponent implements OnInit{
+  @Input("mojtytul")
   public tytul = "probny tytul";
   @Input()
   public lead = "lead probny";
+  public id: number = 0;
 
-  constructor(private pogoda: PogodaService) {
+  constructor(private pogoda: PogodaService, private route: ActivatedRoute) {
     console.log(pogoda.id);
+  }
+  ngOnInit(): void {
+    this.route.params.subscribe( (params) => {
+      this.id = params['id'] as number;
+    }
+    )
   }
 }

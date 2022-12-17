@@ -1,0 +1,19 @@
+@import '../../sass/globals';
+
+p {
+    font-size: sumaCiagu(4) * 1px; //th+2
+    @include marginesy;
+}
+
+tr {
+    background-color: black;
+    td {
+        color: rgba($kolorKomorekDanych, 0.7);
+        font-size: $bazowyFont; //bazowa
+    }
+    th {
+        background-color: red;
+        font-size: 1.5*$bazowyFont; //1.5*td
+    }
+}
+

@@ -1,0 +1,22 @@
+$bazowyFont: 14px;
+$kolorKomorekDanych: green;
+$wersjaKontrastowa: false;
+
+@mixin marginesy {
+    padding:$bazowyFont+6;
+    margin:$bazowyFont+6;
+    @if not($wersjaKontrastowa) {
+        background-color: yellow;
+    }
+    @if $wersjaKontrastowa {
+        background-color: white;
+    }
+}
+
+@function sumaCiagu($liczba) {
+   $wynik: 1;
+   @for $_ from 1 through $liczba {
+    $wynik: $_ + $wynik;
+   }
+   @return $wynik;
+}

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Data } from '@angular/router';
 import { PogodaMiasto, PogodaService } from '../pogoda.service';
 
 @Component({
@@ -10,6 +11,7 @@ import { PogodaMiasto, PogodaService } from '../pogoda.service';
 export class WiadomosciComponent {
   public pierwszyTytul='Pierwszy artykul';
   public pogodaMiasta: PogodaMiasto[] = [];
+  public detale = {dataBiezaca: new Date(), zrodloDanych: 'reuters'};
 
   constructor(private pogoda: PogodaService) {
     console.log(pogoda.id);

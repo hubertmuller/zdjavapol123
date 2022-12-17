@@ -10,6 +10,7 @@ import { WiadomoscComponent } from './wiadomosc/wiadomosc.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormularzComponent } from './formularz/formularz.component';
 import { NawigacjaComponent } from './nawigacja/nawigacja.component';
+import { TestPipe } from './test.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { NawigacjaComponent } from './nawigacja/nawigacja.component';
     WiadomosciComponent,
     WiadomoscComponent,
     FormularzComponent,
-    NawigacjaComponent
+    NawigacjaComponent,
+    TestPipe
   ],
   imports: [
     BrowserModule,

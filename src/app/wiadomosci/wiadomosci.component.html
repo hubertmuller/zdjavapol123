@@ -19,7 +19,7 @@
     <tbody>
     <tr *ngFor="let pogoda of pogodaMiasta">
         <td>{{pogoda.miasto}}</td>
-        <td>{{konwertuj(pogoda.temperatura)}}</td>
+        <td>{{konwertuj(pogoda.temperatura) | test : '*C' : '(odczuwalna)'}}</td>
         <td>{{pogoda.cisnienie}}</td>
     </tr>
     </tbody>

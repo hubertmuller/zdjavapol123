@@ -1,7 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'test'
+  name: 'dodajsuffix'
 })
 export class TestPipe implements PipeTransform {
 

@@ -1,1 +1,50 @@
-<p>formularz works!</p>
+<pre>
+{{forma.value | json}}
+</pre>
+
+<main [formGroup]="forma">
+    <div>
+        <label for="imieid">imie</label>
+        <input type="text" id="imieid" formControlName="imie">
+        <ul class="blad" *ngIf="!pierwszyRaz && forma.controls.imie.errors">
+            <li *ngIf="forma.controls.imie.errors['pattern']">
+                Imie nie spelnia wymaganej dlugosci
+            </li>
+            <li *ngIf="forma.controls.imie.errors['required']">
+                Imie jest wymagane
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <label for="nazwid">nazwisko</label>
+        <input type="text" id="nazwid" formControlName="nazwisko">
+        <ul class="blad" *ngIf="!pierwszyRaz && forma.controls.nazwisko.errors">
+            <li *ngIf="forma.controls.nazwisko.errors['pattern']">
+                Nazwisko nie spelnia wymaganej dlugosci i wzorca
+            </li>
+            <li *ngIf="forma.controls.nazwisko.errors['required']">
+                Nazwisko jest wymagane
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <label for="wiekid">wiek</label>
+        <input type="text" id="wiekid" formControlName="wiek">
+        <ul class="blad" *ngIf="!pierwszyRaz && forma.controls.wiek.errors">
+            <li *ngIf="forma.controls.wiek.errors['min']">
+                Minimalny wymagany wiek to:
+                {{forma.controls.wiek.errors['min'].min}} 
+                a wprowadzony wiek to:
+                {{forma.controls.wiek.errors['min'].actual}}
+            </li>
+            <li *ngIf="forma.controls.wiek.errors['required']">
+                Wiek jest wymagany
+            </li>
+        </ul>
+    </div>
+    <div>
+        <button (click)="zmien()">Zmien</button>
+    </div>
+</main>

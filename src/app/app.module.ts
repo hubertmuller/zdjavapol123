@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormularzComponent } from './formularz/formularz.component';
 import { NawigacjaComponent } from './nawigacja/nawigacja.component';
 import { TestPipe } from './test.pipe';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { TestPipe } from './test.pipe';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
